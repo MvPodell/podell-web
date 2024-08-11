@@ -1,0 +1,135 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem 6rem 6rem;
+    min-height: 100vh;
+  }
+
+.body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.column {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.columnsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.columnLeft {
+    @extend .column;
+    @media (min-width: 1500px) {
+        width: 70%;
+    }
+    align-items: flex-start;
+    margin-right: 3rem;
+    width: 68%;
+}
+
+.columnRight {
+    @extend .column;
+    @media (min-width: 1500px) {
+        width: 30%;
+    }
+    margin-left: 3rem;
+    width: 32%;
+}
+
+.description {
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    font-size: 0.85rem;
+    max-width: var(--max-width);
+    width: 100%;
+    z-index: 2;
+    font-family: var(--font-mono);
+}
+
+.headerContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    justify-content: center;
+    width: 100%;
+
+}
+
+
+.introHead {
+    color: #0047C0;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.introSub {
+    color: #0047C0;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 4rem;
+}
+
+.polaroidContainer {
+    aspect-ratio: 368/560;
+    background-color: #F5F5F5;
+    border: 1px solid #0047C0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 0.75rem 0.85rem 0 0.85rem;
+    width: 100%;
+}
+
+.portrait {
+    object-fit: cover;
+    // margin: 0 0 4rem 0;
+}
+
+.polaroidIcon {
+    margin: 0 0.75rem;
+    width: 2rem;
+    height: 2rem;
+
+}
+
+.polaroidMargin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.resume {
+    width: 100%;
+}
+
+.resumeContainer {
+    align-self: center;
+    border: 1px solid #0047C0;
+    display: flex;
+    justify-content: center;
+    height: 50rem;
+    transition: all 0.5s ease;
+}
