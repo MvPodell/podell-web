@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" id="html">
       <body className={alegreyaSans.className}>{children}</body>
     </html>
   );

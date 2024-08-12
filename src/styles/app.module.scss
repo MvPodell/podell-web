@@ -1,10 +1,11 @@
 .main {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     align-items: center;
     padding: 0 6rem 6rem 6rem;
-    min-height: 100vh;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
   }
 
 .body {
@@ -13,6 +14,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 2rem 0;
+    scroll-snap-align: start;
     width: 100%;
 }
 
@@ -28,7 +30,9 @@
 .columnsContainer {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
+    margin: 0 0 3rem 0;
 }
 
 .columnLeft {
@@ -50,19 +54,8 @@
     width: 32%;
 }
 
-.description {
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    font-size: 0.85rem;
-    max-width: var(--max-width);
-    width: 100%;
-    z-index: 2;
-    font-family: var(--font-mono);
-}
-
 .headerContainer {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     height: 4rem;
@@ -86,7 +79,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-bottom: 4rem;
+    margin-bottom: 18rem;
 }
 
 .polaroidContainer {
@@ -103,7 +96,6 @@
 
 .portrait {
     object-fit: cover;
-    // margin: 0 0 4rem 0;
 }
 
 .polaroidIcon {
@@ -126,10 +118,17 @@
 }
 
 .resumeContainer {
-    align-self: center;
     border: 1px solid #0047C0;
     display: flex;
-    justify-content: center;
     height: 50rem;
-    transition: all 0.5s ease;
+    width: 100%;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
